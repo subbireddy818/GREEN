@@ -4,11 +4,11 @@ export default function Subsidy() {
   return (
     <section className="w-full bg-white">
       {/* Container */}
-      <div className="mx-auto max-w-[1440px] px-[15px] mx-[120px]">
+      <div className="mx-auto max-w-[1440px]">
         {/* Content Section */}
-        <div className="flex items-center justify-between py-16">
+        <div className="flex items-center justify-center py-16" style={{ marginLeft: '120px', marginRight: '120px' }}>
           {/* Left Section - Image */}
-          <div className="p-[15px]">
+          <div className="pt-[15px] pr-[15px] pb-[15px]">
             <img
               src="/subsidy image.jpg"
               alt="Solar Calculator"

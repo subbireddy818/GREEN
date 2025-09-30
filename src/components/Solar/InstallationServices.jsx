@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const InstallationServices = () => {
   const services = [
     {
       id: 1,
       title: 'Residential',
+      link: '/residential',
       image: 'https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=380&h=380&dpr=1',
       icon: (
         <svg className="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
@@ -15,6 +17,7 @@ const InstallationServices = () => {
     {
       id: 2,
       title: 'Housing Society',
+      link: '/housing-society',
       image: 'https://images.pexels.com/photos/9875365/pexels-photo-9875365.jpeg?auto=compress&cs=tinysrgb&w=380&h=380&dpr=1',
       icon: (
         <svg className="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
@@ -26,6 +29,7 @@ const InstallationServices = () => {
     {
       id: 3,
       title: 'Industrial/Commercial',
+      link: '/industrial-commercial',
       image: 'https://images.pexels.com/photos/9875440/pexels-photo-9875440.jpeg?auto=compress&cs=tinysrgb&w=380&h=380&dpr=1',
       icon: (
         <svg className="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
@@ -68,9 +72,12 @@ const InstallationServices = () => {
                   {service.title}
                 </h3>
                 <div className="text-center">
-                  <button className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                  <Link 
+                    to={service.link}
+                    className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105"
+                  >
                     Click Here
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

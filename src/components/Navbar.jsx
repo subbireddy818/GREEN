@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [openInstall, setOpenInstall] = useState(false);
@@ -29,20 +30,40 @@ const Navbar = () => {
 
   const MenuItems = () => (
     <ul className="text-base py-2">
-      {[
-        "Solar Installation",
-        "Water/Waste Water Management",
-        "Bio–Methanation",
-      ].map((label) => (
-        <li key={label}>
-          <a
-            href="#"
-            className="block px-4 py-2 rounded-md hover:bg-gray-100 hover:text-green-700 transition text-gray-800"
-          >
-            {label}
-          </a>
-        </li>
-      ))}
+      <li>
+        <Link
+          to="/solar-installation"
+          className="block px-4 py-2 rounded-md hover:bg-gray-100 hover:text-green-700 transition text-gray-800"
+          onClick={() => setOpenInstall(false)}
+        >
+          Solar Installation
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/housing-society"
+          className="block px-4 py-2 rounded-md hover:bg-gray-100 hover:text-green-700 transition text-gray-800"
+          onClick={() => setOpenInstall(false)}
+        >
+          Housing Society
+        </Link>
+      </li>
+      <li>
+        <a
+          href="#"
+          className="block px-4 py-2 rounded-md hover:bg-gray-100 hover:text-green-700 transition text-gray-800"
+        >
+          Water/Waste Water Management
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          className="block px-4 py-2 rounded-md hover:bg-gray-100 hover:text-green-700 transition text-gray-800"
+        >
+          Bio–Methanation
+        </a>
+      </li>
     </ul>
   );
 
@@ -91,8 +112,8 @@ const Navbar = () => {
 
             {/* Desktop nav beside logo */}
             <nav className="hidden md:flex items-center gap-8">
-              <a
-                href="#"
+              <Link
+                to="/"
                 className={`text-lg font-medium transition ${
                   isAtTop
                     ? "text-white hover:text-green-300"
@@ -100,7 +121,7 @@ const Navbar = () => {
                 }`}
               >
                 Home
-              </a>
+              </Link>
               <div className="relative">
                 <button
                   type="button"
@@ -155,13 +176,13 @@ const Navbar = () => {
       {openMobile && (
         <div className="md:hidden border-t border-black/10 bg-white">
           <div className="max-w-7xl mx-auto px-4 py-4 space-y-2">
-            <a
-              href="#"
+            <Link
+              to="/"
               className="block px-2 py-2 rounded-md text-gray-800 font-medium hover:bg-gray-100"
               onClick={() => setOpenMobile(false)}
             >
               Home
-            </a>
+            </Link>
             <details className="px-2">
               <summary className="flex items-center justify-between py-2 cursor-pointer text-gray-800 font-medium">
                 Installation
