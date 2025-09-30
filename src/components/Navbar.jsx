@@ -40,15 +40,6 @@ const Navbar = () => {
         </Link>
       </li>
       <li>
-        <Link
-          to="/housing-society"
-          className="block px-4 py-2 rounded-md hover:bg-gray-100 hover:text-green-700 transition text-gray-800"
-          onClick={() => setOpenInstall(false)}
-        >
-          Housing Society
-        </Link>
-      </li>
-      <li>
         <a
           href="#"
           className="block px-4 py-2 rounded-md hover:bg-gray-100 hover:text-green-700 transition text-gray-800"

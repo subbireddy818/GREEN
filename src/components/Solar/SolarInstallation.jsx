@@ -31,7 +31,7 @@ function SolarInstallation() {
       <WhyChooseSolar />
       <GCHBenefits />
       <SolarBenefitsCards />
-      <Weprovide />
+      <Weprovide type="residential" />
       <Subsidy />
       <RooftopSolutions />
       <FinanceOptions />

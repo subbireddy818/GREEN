@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Sun, DollarSign, Wrench, Heart, Clock } from "lucide-react";
 
-const benefits = [
+const residentialBenefits = [
   {
     id: 1,
     name: "Renewable & Clean Energy",
@@ -39,13 +39,48 @@ const benefits = [
   }
 ];
 
-export default function OtherBenefits() {
+const industrialBenefits = [
+  {
+    id: 1,
+    name: "Renewable & Clean Source Of Energy",
+    icon: <Sun className="w-16 h-16 text-yellow-500" />,
+    title: "Renewable & Clean Source Of Energy",
+    description: "Industrial solar energy is a clean and renewable source that helps businesses reduce their carbon footprint and contribute to environmental sustainability."
+  },
+  {
+    id: 2,
+    name: "Solar Energy Reduces Electricity Cost",
+    icon: <DollarSign className="w-16 h-16 text-blue-500" />,
+    title: "Solar Energy Reduces Electricity Cost",
+    description: "Industrial rooftop solar panels can generate significant electricity to power manufacturing facilities, reducing operational costs and energy bills."
+  },
+  {
+    id: 3,
+    name: "Maintenance Of Industrial Rooftop Solar Panels Is Low",
+    icon: <Wrench className="w-16 h-16 text-green-500" />,
+    title: "Maintenance Of Industrial Rooftop Solar Panels Is Low",
+    description: "As the solar panels are stable, they do not require any high maintenance services, which saves time and money."
+  },
+  {
+    id: 4,
+    name: "Eco-Friendly And Reduces CO2 Emissions",
+    icon: <Heart className="w-16 h-16 text-red-500" />,
+    title: "Eco-Friendly And Reduces CO2 Emissions",
+    description: "Industrial solar installations help businesses reduce CO2 emissions and demonstrate environmental responsibility to stakeholders and customers."
+  }
+];
+
+export default function OtherBenefits({ type = "residential", cardHeight = 60 }) {
   const [isVisible, setIsVisible] = useState(false);
+  
+  // Select benefits based on type
+  const benefits = type === "industrial" ? industrialBenefits : residentialBenefits;
   const [activeBenefit, setActiveBenefit] = useState(benefits[0]);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+    setActiveBenefit(benefits[0]); // Reset to first benefit when type changes
+  }, [type]);
 
   return (
     <section className={`w-full bg-white pt-[100px] pb-[70px] transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
@@ -75,7 +110,7 @@ export default function OtherBenefits() {
                   style={{ 
                     borderRadius: '10px',
                     width: '305.99px',
-                    height: '60px',
+                    height: `${cardHeight}px`,
                     paddingTop: '16px',
                     paddingBottom: '16px',
                     paddingLeft: '30px',

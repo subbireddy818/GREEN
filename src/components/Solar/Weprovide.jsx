@@ -5,30 +5,33 @@ const GREEN = "#008000";
 const cards = [
   {
     id: 1,
-    title: "Rooftop Solar Panel Layout Design",
+    title: "Rooftop Solar Panel Layout Design Services",
     short:
-      "GreenCarbonHub, a rooftop solar company, is one of the best rooftop solar panel Layout designing companies in Hyderabad near you that designs your requirements properly.",
-    long: `Hyderabad GreenCarbonHub, a rooftop solar company, is one of the best rooftop solar panel Layout designing companies in Hyderabad near you that designs your requirements properly. Layout Design is an essential stage which ensures your solar system is correctly installed and efficiently. Our team of engineers visit your place and enquire about a few factors, including roof size, type of floor, orientation, amount of sunlight your roof receives, energy needs, building codes and regulations, etc. Then, we create a customised solar panel layout design for your rooftop solar system that maximizes energy production and minimizes costs. If you are considering installing rooftop solar panels for home or office in Hyderabad, Call the GreenCarbonHub Team Today!`,
+      "GreenCarbonHub is one of the best Industrial Rooftop Solar Panel layout designing companies near you that designs your requirements properly.",
+    long: `GreenCarbonHub is one of the best Industrial Rooftop Solar Panel layout designing companies near you that designs your requirements properly. Our team of engineers visits your Industry or Organization and enquires about a few factors, including your rooftop size, type of floor, orientation, amount of sunlight your roof receives, energy needs, building codes and regulations, etc. Then, we create a customized solar panel layout design for your industrial solar system that maximizes energy production and minimizes costs. Let us know if you want Commercial Rooftop Solar Panel Systems in your budget. Call the GreenCarbonHub Team Today!`,
   },
   {
     id: 2,
-    title: "Rooftop Solar Panel Installation",
+    title: "Rooftop Solar Panel Installation Services",
     short:
-      "As experts, we can understand that choosing a Solar System for home or office is a big decision.",
-    long: `As experts, we can understand that choosing a Solar System for home or office is a big decision. At GreenCarbonHub, we always try to understand the customer requirements precisely, thus making us your first choice for Rooftop Solar Panel Installation Services in Hyderabad. Our team of Solar System installers guide you in each and every step of the product. Moreover, our expertise will help you install the right system within your budget. Further, it saves money on your energy bills and reduces your surrounding CO2 levels. We assure that the right and long-life products are perfectly installed and work efficiently. Choose the Best Rooftop Solar Panel Company for your needs.`,
+      "Choosing an Industrial Solar System and installing perfect Industrial Solar panels is a big decision.",
+    long: `At GreenCarbonHub, we always try to understand our customer's requirements precisely, thus making us their first choice for Industrial and Commercial Rooftop Solar Panel System Installation Services. Installation of Solar System involves a lot of steps. Our team of technicians takes care of each and every step in the process. Moreover, our expertise will help you install the right system within your budget. Further, it saves money on your energy bills and reduces your surrounding CO2 Levels. We assure you that the right and long-life Industrial Solar Panels are perfectly installed and work efficiently. Choose the Best Industrial Rooftop Solar Company for your needs wisely.`,
   },
   {
     id: 3,
     title: "Rooftop Solar Commissioning Services",
     short:
-      "After installing your rooftop solar panels, it is necessary to have a solar commissioning.",
-    long: `After installing your rooftop solar panels, it is necessary to have a solar commissioning. Solar Commissioning helps you ensure that the rooftop solar system is installed correctly and safely. Benefits of Rooftop Solar Commissioning Services: - Ensures that the whole rooftop solar power system is installed correctly - Ensures that the solar system is connected safely to the grid - Get your system up and running quickly. Our GreenCarbonHub team of expert solar technicians will visit your rooftop solar power system project and make sure that it is operating perfectly. If you are looking for an expert solar system commissioning team in Hyderabad, contact us today.`,
+      "After installing Industrial rooftop solar panels for your business, it is necessary to have a solar commissioning.",
+    long: `After installing Industrial rooftop solar panels for your business, it is necessary to have a solar commissioning. Solar Commissioning helps you ensure that the rooftop solar system is installed correctly and safely. Benefits of Rooftop Solar Commissioning Services: - Ensures that the whole rooftop solar power system is installed correctly - Ensures that the solar system is connected safely to the grid - Get your system up and running quickly. Our GreenCarbonHub team of expert solar technicians will visit your rooftop solar power system project and make sure that it is operating perfectly. If you are looking for an expert solar system commissioning team, contact us today.`,
   },
 ];
 
-export default function Weprovide() {
+export default function Weprovide({ type = "residential" }) {
   const [openId, setOpenId] = useState(null);
   const toggle = (id) => setOpenId((p) => (p === id ? null : id));
+  
+  // Set height based on type
+  const expandedHeight = "650px";
 
   return (
     <section className="w-full bg-[#EAF3ED]">
@@ -49,7 +52,8 @@ export default function Weprovide() {
                 className="bg-white rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.10)] transition-all duration-300 flex flex-col mx-[15px] mb-6"
                 style={{
                   width: "379.99px",
-                  height: expanded ? "593.2px" : "229.2px",
+                  height: expanded ? expandedHeight : "229.2px",
+                  border: "0.8px solid #e5e7eb",
                 }}
               >
                 <div className="px-6 pt-6 flex-1 overflow-hidden">

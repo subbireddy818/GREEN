@@ -7,23 +7,23 @@ const FAQ = () => {
   const faqs = [
     {
       id: 1,
-      question: "Can I use solar power in my apartment?",
-      answer: "Yes, you can use solar power in apartments. Solar Panels available in different sizes and types, few of them are - Portable Solar Panels - Solar Balcony Systems - Community Solar. If you are considering installing the solar panels in your apartment, you need permission of your apartment association or incharges. You may also need to obtain permission from local municipality too."
+      question: "What is the difference between a grid-tied and off-grid solar system?",
+      answer: "A grid-tied solar system is connected to the electrical grid in your area, so you can sell the excess amount of generated electricity back to the utility company. Whereas, the off-grid solar system is not connected to the electrical grid, which means you will store the energy in the batteries and use it for home purposes later."
     },
     {
       id: 2,
-      question: "How is solar energy used in a housing society?",
-      answer: "Solar energy in housing societies provides multiple benefits: - Reduced electricity costs - Power up your street lights, water plants, etc. - Increased energy independence - Improved environmental impact - Increased property value - Your roof stays cooler"
+      question: "How much will it cost to install an Industrial solar energy system in Hyderabad?",
+      answer: "The cost to install an industrial rooftop solar energy system depends on - Size of the system - The type of equipment we choose - And the location of the installation To get the precise cost or estimation, contact our free consultation team."
     },
     {
       id: 3,
-      question: "Do I need batteries to store and use solar panels?",
-      answer: "No, you do not need any batteries to use solar panels, but if you want to store the solar energy to use it for later, when the sun is not shining, you will need to install batteries."
+      question: "How much money will I save on my energy bills in Hyderabad?",
+      answer: "The amount of money that anyone save on energy bills by installation of solar systems depends on few factors, including - Size of the industrial rooftop solar energy system - The current energy consumption."
     },
     {
       id: 4,
-      question: "What type of maintenance is required for rooftop solar systems?",
-      answer: "Rooftop Solar Panels for housing societies require very low maintenance. But the main action you need to perform is - To clean them regularly to remove any dust and dirt. - Furthermore, you need to check your solar system regularly for any damages."
+      question: "How long will it take for a solar energy system to pay for itself?",
+      answer: "Payback period for an industrial solar energy system will be varying according to the cost of the system, amount of energy that a system generates, and also the price of each electricity unit in your area."
     }
   ];
 
@@ -39,25 +39,21 @@ const FAQ = () => {
           Frequently Asked Questions
         </h2>
 
-        <div className="space-y-4">
+        <div className="space-y-4 flex flex-col items-center">
           {faqs.map((faq) => (
             <div
               key={faq.id}
-              className="bg-white"
+              className="bg-white rounded-lg shadow-md border border-gray-200"
               style={{
                 width: '1198.4px',
-                height: openId === faq.id ? 'auto' : '59.2px',
+                minHeight: '59.2px',
                 paddingTop: '18px',
                 paddingRight: '55px',
                 paddingBottom: '18px',
                 paddingLeft: '30px',
-                boxShadow: 'none',
                 fontSize: '18px',
                 fontWeight: '600',
-                borderRadius: '8px',
                 color: openId === faq.id ? '#3A954F' : 'var(--tp-heading-primary)',
-                border: '1px solid rgba(10, 11, 15, 0.1)',
-                background: 'var(--tp-common-white)',
                 transition: 'all 0.3s ease'
               }}
             >

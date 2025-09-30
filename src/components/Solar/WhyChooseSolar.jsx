@@ -71,3 +71,5 @@ const WhyChooseSolar = () => {
 };
 
 export default WhyChooseSolar;
+
+
