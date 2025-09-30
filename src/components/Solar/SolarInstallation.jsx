@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../Navbar.jsx";
 import CTAButtons from "./CTAButtons.jsx";
 import InstallationServices from "./InstallationServices.jsx";
 import WhyChooseSolar from "./WhyChooseSolar.jsx";
@@ -24,8 +23,7 @@ function SolarInstallation() {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
-      <Navbar />
+    <>
       <CTAButtons />
       <InstallationServices />
       <WhyChooseSolar />
@@ -44,7 +42,7 @@ function SolarInstallation() {
       />
       <GetALoanForm />
       <Components />
-    </div>
+    </>
   );
 }
 
